@@ -61,7 +61,7 @@ with col2:
 submit_button = st.button("Predict Risk", type="primary", use_container_width=True)
 
 if submit_button:
-    model = joblib.load("pt_st/deploy20240918/model_xgb.pkl")
+    model = joblib.load("model_xgb.pkl")
     columns = ["Age_at_catheterization", "Gender", "Height", "Marital_status", "SBP", "Hemoglobin", "Triglyceride", "HDL", "PTH", "Total_Ccr", "PET", "Peritonitis"]
     X = pd.DataFrame([[Age_at_catheterization, Gender, Height, Marital_status, SBP, Hemoglobin, Triglyceride, HDL, PTH, Total_Ccr, PET, Peritonitis]], columns=columns)
     prediction = model.predict(X)[0]
