@@ -47,7 +47,7 @@ with col1:
     HDL = st.number_input("High-density lipoprotein,HDL (mmol/L)", min_value=0, step=1)
     PTH = st.number_input("Parathyroid Hormone, PTH (pg/ml)", min_value=0, step=1)
     PET = st.number_input(" Peritoneal Equilibration Test, PET (1-High transport, 2-High average transport, 3-Low average transport, 4-Low transport)", min_value=1, max_value=4, step=1, format="%d")
-    Peritonitis = st.number_input("Peritonitis History (1-Yes, 0-No)", min_value=0, max_value=1, step=1, format="%d")
+    
 
 # 第二列输入
 with col2:
@@ -56,6 +56,7 @@ with col2:
     Hemoglobin = st.number_input("Hemoglobin (g/L)", min_value=0.0, step=0.1)
     Triglyceride = st.number_input("Triglyceride (mg/dL)", min_value=0, step=1)
     Total_Ccr = st.number_input("Total Creatinine Clearance (ml/min)", min_value=0.0, step=0.1)
+    Peritonitis = st.number_input("Peritonitis History (1-Yes, 0-No)", min_value=0, max_value=1, step=1, format="%d")
 
 # 提交按钮美化
 submit_button = st.button("Predict Risk", type="primary", use_container_width=True)
